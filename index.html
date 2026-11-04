@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Achadinhos da Bellamun</title>
+<meta name="description" content="Os achadinhos que eu testei e amei, com link direto para Shopee, Mercado Livre e TikTok Shop.">
+<meta property="og:title" content="Achadinhos da Bellamun">
+<meta property="og:description" content="Os achadinhos que eu testei e amei, com link direto para Shopee, Mercado Livre e TikTok Shop.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#c2185b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23c2185b'/%3E%3Ctext x='32' y='44' font-size='36' font-family='Arial' font-weight='bold' text-anchor='middle' fill='white'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+
+/* Layout: link-na-bio em coluna única no celular, grade no desktop; painel da dona abre por cima, só para ela */
+:root{
+  --bg:#fff6f9; --surface:#ffffff; --ink:#2b1230; --muted:#7b6380; --line:#f0d9e4;
+  --berry:#c2185b; --berry-ink:#ffffff; --blush:#ffe3ee; --ok:#1b7a43; --warn:#a15c00;
+  --shopee:#ee4d2d; --ml:#ffe600; --ml-ink:#2d3277; --tiktok:#111111; --tiktok-ink:#ffffff;
+  --display:"Bricolage Grotesque","Arial Rounded MT Bold",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1b0e1f; --surface:#26152b; --ink:#fbeef4; --muted:#c3a9c8; --line:#3d2544;
+  --berry:#ff5c9a; --berry-ink:#2b0a19; --blush:#3a1a33; --ok:#5fd394; --warn:#ffb454; --tiktok:#f2f2f2; --tiktok-ink:#111111;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1b0e1f; --surface:#26152b; --ink:#fbeef4; --muted:#c3a9c8; --line:#3d2544;
+  --berry:#ff5c9a; --berry-ink:#2b0a19; --blush:#3a1a33; --ok:#5fd394; --warn:#ffb454; --tiktok:#f2f2f2; --tiktok-ink:#111111;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1040px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:24px}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
+.avatar{width:92px;height:92px;border-radius:50%;background:var(--berry);color:var(--berry-ink);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:40px;box-shadow:0 0 0 5px var(--bg),0 0 0 7px var(--berry);overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.handle{font-weight:600;color:var(--muted);font-size:15px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,7vw,56px);line-height:1;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 em{font-style:normal;color:var(--berry)}
+.bio{margin:0;max-width:44ch;color:var(--muted);white-space:pre-line}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.tag::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.7}
+.t-shopee{background:var(--shopee);color:#fff}
+.t-ml{background:var(--ml);color:var(--ml-ink)}
+.t-tiktok{background:var(--tiktok);color:var(--tiktok-ink)}
+.controls{display:flex;flex-direction:column;gap:12px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px}
+.search{width:100%;font:inherit;font-size:16px;padding:13px 16px;border-radius:14px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.search:focus{outline:none;border-color:var(--berry)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{font:inherit;font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;border:2px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--berry);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.thumb{aspect-ratio:1/1;max-width:100%;position:relative;display:grid;place-items:center;background:var(--blush);overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb .ph{font-family:var(--display);font-weight:800;font-size:64px;color:var(--berry);opacity:.35;letter-spacing:-.04em}
+.thumb .tag{position:absolute;top:10px;left:10px}
+.selo{position:absolute;top:10px;right:10px;background:var(--berry);color:var(--berry-ink);font-size:11px;font-weight:700;padding:4px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.04em}
+.info{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1;min-width:0}
+.cat{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.nome{font-weight:700;font-size:17px;line-height:1.25;margin:0;text-wrap:balance;overflow-wrap:anywhere}
+.desc{margin:0;color:var(--muted);font-size:14px}
+.preco{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;font-variant-numeric:tabular-nums;margin-top:auto}
+.preco b{font-family:var(--display);font-size:24px;font-weight:800}
+.preco s{color:var(--muted);font-size:14px}
+.cupom{display:flex;align-items:center;justify-content:space-between;gap:8px;border:2px dashed var(--berry);border-radius:12px;padding:6px 6px 6px 12px;font-size:13px;min-width:0}
+.cupom code{font-weight:700;font-family:ui-monospace,Menlo,monospace;color:var(--berry);font-size:14px}
+.copy{font:inherit;font-size:12px;font-weight:700;border:0;border-radius:8px;padding:6px 10px;background:var(--blush);color:var(--ink);cursor:pointer}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font:inherit;font-weight:700;font-size:15px;padding:13px 16px;border-radius:14px;border:0;background:var(--berry);color:var(--berry-ink);cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:16px;height:16px}
+.btn.sec{background:var(--surface);color:var(--ink);border:2px solid var(--line)}
+.vazio{text-align:center;color:var(--muted);padding:40px 0;margin:0}
+footer{text-align:center;font-size:13px;color:var(--muted);max-width:60ch;margin:0 auto}
+
+/* Painel (só a dona vê) */
+.fab{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.pendente{position:fixed;left:0;right:0;bottom:0;z-index:19;background:var(--ink);color:var(--bg);padding-block:12px calc(12px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(140px,env(safe-area-inset-right,0px));display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-weight:600;font-size:14px}
+.pendente .btn{padding:8px 14px;font-size:14px}
+.painel{position:fixed;inset:0;z-index:30;background:var(--bg);overflow-y:auto}
+.painel-in{max-width:760px;margin:0 auto;padding-block:calc(20px + env(safe-area-inset-top,0px)) calc(100px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:20px}
+.painel-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.painel h2{font-family:var(--display);font-weight:800;font-size:28px;margin:0}
+.painel h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0}
+.bloco{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:14px}
+.campos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.campos .full{grid-column:1/-1}
+@media (max-width:560px){.campos{grid-template-columns:1fr}}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600;min-width:0}
+label.f small{font-weight:400;color:var(--muted)}
+.f input,.f select,.f textarea{font:inherit;font-size:16px;padding:10px 12px;border-radius:10px;border:2px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+.f textarea{min-height:64px;resize:vertical}
+.aviso{font-size:13px;font-weight:600;margin:0}
+.aviso.ok{color:var(--ok)} .aviso.warn{color:var(--warn)}
+.acoes{display:flex;gap:10px;flex-wrap:wrap}
+.lista{display:flex;flex-direction:column;gap:8px}
+.item{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;padding:8px;border:1px solid var(--line);border-radius:14px;background:var(--bg)}
+.item .mini{width:52px;height:52px;border-radius:10px;background:var(--blush);overflow:hidden;display:grid;place-items:center;font-family:var(--display);font-weight:800;color:var(--berry)}
+.item .mini img{width:100%;height:100%;object-fit:cover}
+.item .txt{min-width:0}
+.item .txt b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item .txt span{font-size:12px;color:var(--muted)}
+.item .bts{display:flex;gap:4px}
+.ic{font:inherit;font-size:13px;font-weight:700;border:0;border-radius:8px;padding:6px 9px;background:var(--blush);color:var(--ink);cursor:pointer}
+.ic.del{color:var(--berry)}
+.foto-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.foto-prev{width:64px;height:64px;border-radius:12px;background:var(--blush);overflow:hidden;display:grid;place-items:center;font-size:11px;color:var(--muted);text-align:center}
+.foto-prev img{width:100%;height:100%;object-fit:cover}
+.status{font-size:14px;font-weight:600;min-height:1.5em;margin:0}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+@media (max-width:480px){.grid{grid-template-columns:1fr 1fr;gap:10px}.thumb .ph{font-size:44px}.info{padding:10px 12px 12px}.nome{font-size:15px}.desc{display:none}.preco b{font-size:19px}.btn{font-size:14px;padding:11px 10px}.thumb .tag{font-size:10px;padding:3px 7px}.item{grid-template-columns:44px 1fr}.item .mini{width:44px;height:44px}.item .bts{grid-column:1/-1;justify-content:flex-end}}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="avatar" id="avatar" aria-hidden="true">B</div>
+    <div class="handle" id="handle">@bellamun</div>
+    <h1>Achadinhos da <em>Bellamun</em></h1>
+    <p class="bio" id="bio">Tudo que eu testei, amei e mostrei nos vídeos. Toque no produto para comprar direto na loja.</p>
+  </header>
+  <div class="controls">
+    <input id="busca" class="search" type="search" placeholder="Buscar achadinho…" aria-label="Buscar produto">
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por loja"></div>
+  </div>
+  <main>
+    <div class="grid" id="grid"></div>
+    <p class="vazio" id="vazio">Carregando achadinhos…</p>
+  </main>
+</div>
+<script>
+(function(){
+"use strict";
+const $=id=>document.getElementById(id);
+const LOJAS={shopee:{nome:"Shopee",cls:"t-shopee"},ml:{nome:"Mercado Livre",cls:"t-ml"},tiktok:{nome:"TikTok Shop",cls:"t-tiktok"}};
+let estado={perfil:{},produtos:[]}, filtro="todas";
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fotoSrc=v=>typeof v==="string"&&/^fotos\/[\w-]+\.(jpg|jpeg|png|webp)$/i.test(v)?v:"";
+const linkOk=u=>{try{const x=new URL(u);return x.protocol==="https:"||x.protocol==="http:"}catch(_){return false}};
+const iniciais=n=>(String(n).split(/\s+/).filter(w=>w.length>2).slice(0,2).map(w=>w[0].toUpperCase()).join(""))||"★";
+const seta='<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+
+function renderPerfil(){
+  const p=estado.perfil||{};
+  if(p.handle)$("handle").textContent=p.handle;
+  if(p.bio)$("bio").textContent=p.bio;
+  const src=fotoSrc(p.foto); if(src)$("avatar").innerHTML=`<img src="${src}" alt="">`;
+}
+function renderChips(){
+  const usadas=Object.keys(LOJAS).filter(k=>estado.produtos.some(p=>p.loja===k));
+  $("chips").hidden=usadas.length<2;
+  $("chips").innerHTML=[["todas","Todas"],...usadas.map(k=>[k,LOJAS[k].nome])].map(([k,n])=>`<button type="button" class="chip" data-k="${k}" aria-pressed="${k===filtro}">${esc(n)}</button>`).join("");
+}
+function renderGrid(){
+  const q=$("busca").value.trim().toLowerCase();
+  const lista=estado.produtos.filter(p=>(filtro==="todas"||p.loja===filtro)&&(!q||(p.nome+" "+(p.cat||"")+" "+(p.desc||"")).toLowerCase().includes(q)));
+  $("vazio").hidden=lista.length>0;
+  $("vazio").textContent=estado.produtos.length?"Nenhum achadinho encontrado. Tente outra palavra ou loja.":"Novos achadinhos chegando em breve.";
+  $("grid").innerHTML=lista.map(p=>{
+    const L=LOJAS[p.loja]||LOJAS.shopee, src=fotoSrc(p.foto), ok=linkOk(p.link);
+    return `<article class="card">
+      <div class="thumb">${src?`<img src="${src}" alt="${esc(p.nome)}" loading="lazy">`:`<span class="ph" aria-hidden="true">${esc(iniciais(p.nome))}</span>`}
+        <span class="tag ${L.cls}">${esc(L.nome)}</span>${p.selo?`<span class="selo">${esc(p.selo)}</span>`:""}</div>
+      <div class="info">
+        ${p.cat?`<span class="cat">${esc(p.cat)}</span>`:""}
+        <h2 class="nome">${esc(p.nome)}</h2>
+        ${p.desc?`<p class="desc">${esc(p.desc)}</p>`:""}
+        ${p.preco?`<div class="preco"><b>${esc(p.preco)}</b>${p.precoAntigo?`<s>${esc(p.precoAntigo)}</s>`:""}</div>`:""}
+        ${p.cupom?`<div class="cupom"><span>Cupom <code>${esc(p.cupom)}</code></span><button type="button" class="copy" data-c="${esc(p.cupom)}">Copiar</button></div>`:""}
+        ${ok?`<a class="btn" href="${esc(p.link)}" target="_blank" rel="noopener sponsored nofollow">Comprar na ${esc(L.nome)} ${seta}</a>`:""}
+      </div></article>`;
+  }).join("");
+}
+$("chips").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;filtro=b.dataset.k;renderChips();renderGrid();});
+$("busca").addEventListener("input",renderGrid);
+$("grid").addEventListener("click",e=>{
+  const b=e.target.closest(".copy");if(!b)return;
+  const done=t=>{b.textContent=t;setTimeout(()=>b.textContent="Copiar",1600);};
+  const sel=()=>{const c=b.parentElement.querySelector("code");const r=document.createRange();r.selectNodeContents(c);const s=getSelection();s.removeAllRanges();s.addRange(r);done("Selecionado");};
+  try{navigator.clipboard.writeText(b.dataset.c).then(()=>done("Copiado!"),sel);}catch(_){sel();}
+});
+fetch("produtos.json?v="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json();})
+  .then(d=>{estado={perfil:d.perfil||{},produtos:Array.isArray(d.produtos)?d.produtos:[]};renderPerfil();renderChips();renderGrid();})
+  .catch(()=>{$("vazio").textContent="Não consegui carregar os achadinhos agora. Atualize a página em instantes.";});
+})();
+</script>
+</body>
+</html>
