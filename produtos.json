@@ -6,6 +6,19 @@
   },
   "produtos": [
     {
+      "id": "pmw1i1p3u",
+      "nome": "Kit 3 Top Cropped Academia Forro Duplo Microfibra Feminino",
+      "cat": "Moda",
+      "loja": "shopee",
+      "preco": "R$39,86",
+      "precoAntigo": "R$46,90",
+      "cupom": "",
+      "selo": "Oferta",
+      "desc": "",
+      "link": "https://s.shopee.com.br/9KjLOEgeq4",
+      "foto": "fotos/mw1hz2oogyei.jpg"
+    },
+    {
       "id": "pmw1gpvyr",
       "nome": "ULTRA HIDRATAÇÃO EFEITO TEIA COM ÓLEOS MARROQUINOS - OURO MARROQUINO - FINA MARIA PROFISSI",
       "cat": "Cabelo",
