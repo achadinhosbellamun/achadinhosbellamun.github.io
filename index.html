@@ -175,20 +175,28 @@ function renderGrid(){
         ${p.desc?`<p class="desc">${esc(p.desc)}</p>`:""}
         ${p.preco?`<div class="preco"><b>${esc(p.preco)}</b>${p.precoAntigo?`<s>${esc(p.precoAntigo)}</s>`:""}</div>`:""}
         ${p.cupom?`<div class="cupom"><span>Cupom <code>${esc(p.cupom)}</code></span><button type="button" class="copy" data-c="${esc(p.cupom)}">Copiar</button></div>`:""}
-        ${ok?`<a class="btn" href="${esc(p.link)}" target="_blank" rel="noopener sponsored nofollow">Comprar na ${esc(L.nome)} ${seta}</a>`:""}
+        ${ok?`<a class="btn" href="${esc(p.link)}" data-m="clique-${esc(p.loja)}-${esc(p.id)}" data-t="${esc(p.nome)}" target="_blank" rel="noopener sponsored nofollow">Comprar na ${esc(L.nome)} ${seta}</a>`:""}
       </div></article>`;
   }).join("");
 }
 $("chips").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;filtro=b.dataset.k;renderChips();renderGrid();});
 $("busca").addEventListener("input",renderGrid);
+function evento(path,title){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:path,title:title||path,event:true});}catch(_){}}
+function iniciarMetricas(code){
+  if(typeof code!=="string"||!/^[a-z0-9-]{2,50}$/.test(code))return;
+  const sc=document.createElement("script");sc.async=true;sc.src="https://gc.zgo.at/count.js";
+  sc.setAttribute("data-goatcounter","https://"+code+".goatcounter.com/count");document.head.appendChild(sc);
+}
 $("grid").addEventListener("click",e=>{
+  const a=e.target.closest("a[data-m]");if(a){evento(a.dataset.m,a.dataset.t);return;}
   const b=e.target.closest(".copy");if(!b)return;
+  evento("cupom-"+b.dataset.c,"Cupom "+b.dataset.c);
   const done=t=>{b.textContent=t;setTimeout(()=>b.textContent="Copiar",1600);};
   const sel=()=>{const c=b.parentElement.querySelector("code");const r=document.createRange();r.selectNodeContents(c);const s=getSelection();s.removeAllRanges();s.addRange(r);done("Selecionado");};
   try{navigator.clipboard.writeText(b.dataset.c).then(()=>done("Copiado!"),sel);}catch(_){sel();}
 });
 fetch("produtos.json?v="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json();})
-  .then(d=>{estado={perfil:d.perfil||{},produtos:Array.isArray(d.produtos)?d.produtos:[]};renderPerfil();renderChips();renderGrid();})
+  .then(d=>{estado={perfil:d.perfil||{},produtos:Array.isArray(d.produtos)?d.produtos:[]};renderPerfil();renderChips();renderGrid();iniciarMetricas(d.config&&d.config.goatcounter);})
   .catch(()=>{$("vazio").textContent="Não consegui carregar os achadinhos agora. Atualize a página em instantes.";});
 })();
 </script>
