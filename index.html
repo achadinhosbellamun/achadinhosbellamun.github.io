@@ -63,7 +63,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .thumb .ph{font-family:var(--display);font-weight:800;font-size:64px;color:var(--berry);opacity:.35;letter-spacing:-.04em}
 .thumb .tag{position:absolute;top:10px;left:10px}
 .selo{position:absolute;top:10px;right:10px;background:var(--berry);color:var(--berry-ink);font-size:11px;font-weight:700;padding:4px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.04em}
-.info{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1;min-width:0}
+.info{padding:14px 16px 16px;display:flex;flex-direction:column;gap:12px;flex:1;min-width:0;justify-content:space-between}
+a.thumb{text-decoration:none}
 .cat{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .nome{font-weight:700;font-size:17px;line-height:1.25;margin:0;text-wrap:balance;overflow-wrap:anywhere}
 .desc{margin:0;color:var(--muted);font-size:14px}
@@ -161,20 +162,16 @@ function renderChips(){
 }
 function renderGrid(){
   const q=$("busca").value.trim().toLowerCase();
-  const lista=estado.produtos.filter(p=>(filtro==="todas"||p.loja===filtro)&&(!q||(p.nome+" "+(p.cat||"")+" "+(p.desc||"")).toLowerCase().includes(q)));
+  const lista=estado.produtos.filter(p=>(filtro==="todas"||p.loja===filtro)&&(!q||(p.nome+" "+(p.cat||"")).toLowerCase().includes(q)));
   $("vazio").hidden=lista.length>0;
   $("vazio").textContent=estado.produtos.length?"Nenhum achadinho encontrado. Tente outra palavra ou loja.":"Novos achadinhos chegando em breve.";
   $("grid").innerHTML=lista.map(p=>{
     const L=LOJAS[p.loja]||LOJAS.shopee, src=fotoSrc(p.foto), ok=linkOk(p.link);
     return `<article class="card">
-      <div class="thumb">${src?`<img src="${src}" alt="${esc(p.nome)}" loading="lazy">`:`<span class="ph" aria-hidden="true">${esc(iniciais(p.nome))}</span>`}
-        <span class="tag ${L.cls}">${esc(L.nome)}</span>${p.selo?`<span class="selo">${esc(p.selo)}</span>`:""}</div>
+      <a class="thumb" href="${ok?esc(p.link):"#"}" ${ok?`data-m="clique-${esc(p.loja)}-${esc(p.id)}" data-t="${esc(p.nome)}" target="_blank" rel="noopener sponsored nofollow"`:""} aria-label="${esc(p.nome)}">${src?`<img src="${src}" alt="${esc(p.nome)}" loading="lazy">`:`<span class="ph" aria-hidden="true">${esc(iniciais(p.nome))}</span>`}
+        <span class="tag ${L.cls}">${esc(L.nome)}</span></a>
       <div class="info">
-        ${p.cat?`<span class="cat">${esc(p.cat)}</span>`:""}
         <h2 class="nome">${esc(p.nome)}</h2>
-        ${p.desc?`<p class="desc">${esc(p.desc)}</p>`:""}
-        ${p.preco?`<div class="preco"><b>${esc(p.preco)}</b>${p.precoAntigo?`<s>${esc(p.precoAntigo)}</s>`:""}</div>`:""}
-        ${p.cupom?`<div class="cupom"><span>Cupom <code>${esc(p.cupom)}</code></span><button type="button" class="copy" data-c="${esc(p.cupom)}">Copiar</button></div>`:""}
         ${ok?`<a class="btn" href="${esc(p.link)}" data-m="clique-${esc(p.loja)}-${esc(p.id)}" data-t="${esc(p.nome)}" target="_blank" rel="noopener sponsored nofollow">Comprar na ${esc(L.nome)} ${seta}</a>`:""}
       </div></article>`;
   }).join("");
