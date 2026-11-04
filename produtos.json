@@ -4,5 +4,19 @@
     "bio": "Tudo que eu testei, amei e mostrei nos vídeos. Toque no produto para comprar direto na loja.",
     "foto": "fotos/mw1g47clt6k8.jpg"
   },
-  "produtos": []
+  "produtos": [
+    {
+      "id": "pmw1gpvyr",
+      "nome": "ULTRA HIDRATAÇÃO EFEITO TEIA COM ÓLEOS MARROQUINOS - OURO MARROQUINO - FINA MARIA PROFISSI",
+      "cat": "Cabelo",
+      "loja": "shopee",
+      "preco": "R$39,97",
+      "precoAntigo": "R$79,80",
+      "cupom": "",
+      "selo": "Oferta",
+      "desc": "",
+      "link": "https://s.shopee.com.br/9pfbsXUNsP",
+      "foto": "fotos/mw1gpsk7vr5m.jpg"
+    }
+  ]
 }
