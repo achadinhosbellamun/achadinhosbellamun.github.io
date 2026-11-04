@@ -1,1 +1,8 @@
-{"perfil":{"handle":"@bellamun","bio":"Tudo que eu testei, amei e mostrei nos vídeos. Toque no produto para comprar direto na loja.","foto":""},"produtos":[]}
+{
+  "perfil": {
+    "handle": "@bellamun",
+    "bio": "Tudo que eu testei, amei e mostrei nos vídeos. Toque no produto para comprar direto na loja.",
+    "foto": "fotos/mw1g47clt6k8.jpg"
+  },
+  "produtos": []
+}
