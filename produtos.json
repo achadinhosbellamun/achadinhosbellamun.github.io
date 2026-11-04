@@ -6,6 +6,19 @@
   },
   "produtos": [
     {
+      "id": "pmw2bs867",
+      "nome": "Óleo Finalizador Óleo Extraordinário, Anti Frizz, Protetor Térmico, L'Oréal Paris Elseve 1",
+      "cat": "Cabelo",
+      "loja": "shopee",
+      "preco": "R$32,90",
+      "precoAntigo": "R$60,59",
+      "cupom": "",
+      "selo": "Oferta",
+      "desc": "",
+      "link": "https://s.shopee.com.br/AAITIlX2lV",
+      "foto": "fotos/mw2bs5kvq9wz.jpg"
+    },
+    {
       "id": "pmw1i1p3u",
       "nome": "Kit 3 Top Cropped Academia Forro Duplo Microfibra Feminino",
       "cat": "Moda",
