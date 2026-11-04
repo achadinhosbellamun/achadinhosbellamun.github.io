@@ -6,6 +6,19 @@
   },
   "produtos": [
     {
+      "id": "pmw2hfor3",
+      "nome": "Conjunto Feminino Elegante Regata Asimetrica",
+      "cat": "Moda",
+      "loja": "tiktok",
+      "preco": "74,33",
+      "precoAntigo": "161,00",
+      "cupom": "",
+      "selo": "Oferta",
+      "desc": "",
+      "link": "https://vt.tiktok.com/ZS9yTDVHtuEGB-EFsA5/",
+      "foto": "fotos/mw2hfnuzpq6g.jpg"
+    },
+    {
       "id": "pmw2ggyn1",
       "nome": "Vestido Midi Assimétrico Ana Longo Elegante",
       "cat": "Moda",
