@@ -6,6 +6,19 @@
   },
   "produtos": [
     {
+      "id": "pmw2wbarg",
+      "nome": "Vestido Feminino Curto Vermelho",
+      "cat": "Moda",
+      "loja": "tiktok",
+      "preco": "",
+      "precoAntigo": "",
+      "cupom": "",
+      "selo": "",
+      "desc": "",
+      "link": "https://vt.tiktok.com/ZS9yw4nB7eWSL-pEw74/",
+      "foto": "fotos/mw2wb8u9f51k.jpg"
+    },
+    {
       "id": "pmw2vsh3o",
       "nome": "Conjunto Feminino 2 Peças",
       "cat": "Moda",
