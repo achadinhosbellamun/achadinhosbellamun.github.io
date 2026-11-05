@@ -6,6 +6,19 @@
   },
   "produtos": [
     {
+      "id": "pmw2vdgtd",
+      "nome": "Lip Gloss 3D Hydra Gloss-Kiko Milano",
+      "cat": "Maquiagem",
+      "loja": "shopee",
+      "preco": "",
+      "precoAntigo": "",
+      "cupom": "",
+      "selo": "",
+      "desc": "",
+      "link": "https://s.shopee.com.br/9APwiVjzXL?share_channel_code=1",
+      "foto": "fotos/mw2vdgatkcb3.jpg"
+    },
+    {
       "id": "pmw2u9lxs",
       "nome": "Blusa Franzida Um Ombro Feminina Kits e Avulsa Looks Natal",
       "cat": "Moda",
