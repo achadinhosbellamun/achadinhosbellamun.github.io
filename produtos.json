@@ -6,6 +6,19 @@
   },
   "produtos": [
     {
+      "id": "pmw2vsh3o",
+      "nome": "Conjunto Feminino 2 Peças",
+      "cat": "Moda",
+      "loja": "tiktok",
+      "preco": "",
+      "precoAntigo": "",
+      "cupom": "",
+      "selo": "",
+      "desc": "",
+      "link": "https://vt.tiktok.com/ZS9ywXPB1BehL-Tw2Aj/",
+      "foto": "fotos/mw2vsew12noc.jpg"
+    },
+    {
       "id": "pmw2vdgtd",
       "nome": "Lip Gloss 3D Hydra Gloss-Kiko Milano",
       "cat": "Maquiagem",
