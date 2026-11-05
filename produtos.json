@@ -6,6 +6,19 @@
   },
   "produtos": [
     {
+      "id": "pmw2u1808",
+      "nome": "Caneta de Sobrancelha Fio a Fio 4 Pontas maquiagem À Prova D'Água Preenche Falhas Natural",
+      "cat": "Maquiagem",
+      "loja": "shopee",
+      "preco": "",
+      "precoAntigo": "",
+      "cupom": "",
+      "selo": "",
+      "desc": "",
+      "link": "https://s.shopee.com.br/7fb8slpE0c?share_channel_code=1",
+      "foto": "fotos/mw2u101c4gss.jpg"
+    },
+    {
       "id": "pmw2hyy68",
       "nome": "Conjunto Feminino longa e Cropped Top Poá Alça Relugável",
       "cat": "Moda",
@@ -83,8 +96,5 @@
       "link": "https://s.shopee.com.br/9pfbsXUNsP",
       "foto": "fotos/mw1gpsk7vr5m.jpg"
     }
-  ],
-  "config": {
-    "goatcounter": "achadinhosbellamun"
-  }
+  ]
 }
