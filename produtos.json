@@ -6,6 +6,32 @@
   },
   "produtos": [
     {
+      "id": "pmwawcm1h",
+      "nome": "Lava Louças Praxis Portátil LLPP 2.0 Semi-Automática 127V",
+      "cat": "Casa",
+      "loja": "shopee",
+      "preco": "",
+      "precoAntigo": "",
+      "cupom": "",
+      "selo": "",
+      "desc": "",
+      "link": "https://s.shopee.com.br/7KyRUuaRdF?share_channel_code=1",
+      "foto": "fotos/mwawckjszozx.jpg"
+    },
+    {
+      "id": "pmwatra5e",
+      "nome": "Kit Skincare Principia",
+      "cat": "Skincare",
+      "loja": "tiktok",
+      "preco": "",
+      "precoAntigo": "",
+      "cupom": "",
+      "selo": "",
+      "desc": "",
+      "link": "https://vt.tiktok.com/ZS9fUrQPP64S5-y3JVq/",
+      "foto": "fotos/mwatr8qak0ci.jpg"
+    },
+    {
       "id": "pmwaqhhud",
       "nome": "Vestido Modal",
       "cat": "Moda",
