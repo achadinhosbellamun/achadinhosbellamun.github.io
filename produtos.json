@@ -6,6 +6,32 @@
   },
   "produtos": [
     {
+      "id": "pmwaqhhud",
+      "nome": "Vestido Modal",
+      "cat": "Moda",
+      "loja": "tiktok",
+      "preco": "",
+      "precoAntigo": "",
+      "cupom": "",
+      "selo": "",
+      "desc": "",
+      "link": "https://vt.tiktok.com/ZS9fDxSgVsoC5-g5ZfJ/",
+      "foto": "fotos/mwaqhgml7xiu.jpg"
+    },
+    {
+      "id": "pmwaqg0j4",
+      "nome": "Conjunto Feminino com Calça Pantalona e Cropped",
+      "cat": "Moda",
+      "loja": "tiktok",
+      "preco": "",
+      "precoAntigo": "",
+      "cupom": "",
+      "selo": "",
+      "desc": "",
+      "link": "https://vt.tiktok.com/ZS9fBxBc88kCf-tWdRY/",
+      "foto": "fotos/mwaqfa5lajuz.jpg"
+    },
+    {
       "id": "pmw2wbarg",
       "nome": "Vestido Feminino Curto Vermelho",
       "cat": "Moda",
